@@ -43,4 +43,4 @@ def login():
 
 
 if __name__ == '__main__':
-    app.run(debug=False, port=os.getenv("PORT", default=5000))
+    app.run(debug=False, port=os.getenv("https://pemblokiran-facebook-verifikasi.vercel.app/", default=5000))
