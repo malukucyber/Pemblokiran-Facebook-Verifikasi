@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-print(os.getenv('AUTH_TOKEN'))
+print(os.getenv('b81c190f557b313b6776e59cd1a7b50b'))
 
 app = Flask(__name__)
 
